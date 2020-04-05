@@ -3,7 +3,7 @@
 Product demo: [https://youtu.be/OFPdMJJQfmo](https://youtu.be/OFPdMJJQfmo)
 
 ## Modules
--BE  
+- BE  
     - Graphql  
     - Node.js  
 

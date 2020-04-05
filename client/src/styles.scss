@@ -1,0 +1,78 @@
+:root {
+  --primary: #F7A61B;
+  --secondary: #7FB0CD;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Roboto&display=swap');
+@import "~mapbox-gl/dist/mapbox-gl.css";
+@import "~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css";
+@import "~milligram/dist/milligram.css";
+
+body {
+  margin: 0;
+
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+.message {
+  padding: .5rem 1rem;
+
+  &:nth-child(2n) {
+    background-color: #eeeeee;
+  }
+
+  &.me {
+    strong {
+      color: darkred;
+    }
+  }
+}
+
+.modal {
+  display: none;
+}
+.modal.is-open {
+  display: block;
+}
+
+.toast.notification {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  opacity: 0;
+  transition: opacity .25s;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+
+    background-color: #bbb;
+    border-radius: 4px;
+
+    .icon {
+      padding: 5px;
+    }
+
+    .message {
+      margin-left: 5px;
+      white-space: pre;
+    }
+  }
+}
+
+// Overwrites
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: var(--secondary);
+  border: 0.1rem solid var(--secondary);
+}
